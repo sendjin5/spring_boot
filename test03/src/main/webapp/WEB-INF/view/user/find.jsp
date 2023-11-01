@@ -12,9 +12,6 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-    <h1>메인 페이지요</h1>
 
-    <a href="${path }/user/List.do">회원 리스트</a>
-    <a href="${path }/user/login.do">로그인</a>
 </body>
 </html>

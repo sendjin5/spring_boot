@@ -12,9 +12,15 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-    <h1>메인 페이지요</h1>
+<script>
+    msg=${msg}
+    if(msg != null){
+        '<h2> 아이디는'+ msg + '입니다. </h2>'
+    }else{
+        alert("해당 아이디는 없습니다.")
+    }
 
-    <a href="${path }/user/List.do">회원 리스트</a>
-    <a href="${path }/user/login.do">로그인</a>
+
+</script>
 </body>
 </html>

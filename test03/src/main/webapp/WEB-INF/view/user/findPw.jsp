@@ -12,9 +12,13 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-    <h1>메인 페이지요</h1>
+<form action="${path }/Idlogin.do" method="post" >
+<input type="text" id="name" name="name" placeholder="아이디" required>
+<input type="password" id="pw" name="pw" placeholder="비밀번호" required>
 
-    <a href="${path }/user/List.do">회원 리스트</a>
-    <a href="${path }/user/login.do">로그인</a>
+    <button type="submit">로그인</button>
+</form>
+
+
 </body>
 </html>

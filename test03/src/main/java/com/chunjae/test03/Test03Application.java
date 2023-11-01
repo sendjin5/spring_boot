@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.stereotype.Controller;
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
-@Controller
 public class Test03Application {
 
     public static void main(String[] args) {

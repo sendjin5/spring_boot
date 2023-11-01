@@ -12,9 +12,20 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-    <h1>메인 페이지요</h1>
+<form action="" method="Get" onsubmit="findId(this)" >
+<input type="text" id="email" name="email" placeholder="이메일" required>
+<input type="password" id="tel" name="tel" placeholder="전화번호" required>
 
-    <a href="${path }/user/List.do">회원 리스트</a>
-    <a href="${path }/user/login.do">로그인</a>
+    <button type="submit" >찾기</button>
+</form>
+<script>
+    function findId(f){
+        var url ="${path }/user/FindIdp.do"
+        var size ="width=500px, height=500px"
+        window.open(url, 'child', size)
+    }
+
+</script>
+
 </body>
 </html>
