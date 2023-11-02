@@ -1,0 +1,37 @@
+server:
+  port: 8086
+#  servlet:
+#    context-path: /pro05
+
+
+spring:
+  profile:
+    active: lacal
+  thymeleaf:
+    prefix: classpath:/templates/         #html ??? ? ? thymeleaf? ??????, jsp? ?? ???.
+    suffix: .html
+    check-template-location: true
+    cache: false
+  mvc:
+    hidden-method:
+      filter:
+        enabled: true
+    datasource:
+      driver-class-name:  org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://localhost:3306/tsherpa
+      username: root
+      password: 1234
+    static-path-pattern: /static/**         #css? js ?? ??
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.chunjae.test07.entity
+  mapper-locations: mappers/**/*.xml
+
+
+  # Log Backup ??
+logging:
+  config: classpath:logback.xml
+

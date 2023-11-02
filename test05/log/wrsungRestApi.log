@@ -1,0 +1,66 @@
+2023-11-02 09:11:08.317 INFO  [restartedMain] [com.chunjae.test05.Test05Application] - Starting Test05Application using Java 17.0.7 with PID 14016 (D:\kyo\spring_boot\test05\build\classes\java\main started by db400tea in D:\kyo\spring_boot\test05)
+2023-11-02 09:11:08.318 INFO  [restartedMain] [com.chunjae.test05.Test05Application] - No active profile set, falling back to 1 default profile: "default"
+2023-11-02 09:11:08.348 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-02 09:11:08.348 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-02 09:11:08.602 WARN  [restartedMain] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userService' defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class]] for bean 'userService' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=applicationConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/chunjae/test05/config/ApplicationConfig.class]] bound.
+2023-11-02 09:11:08.610 INFO  [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-02 09:11:08.622 ERROR [restartedMain] [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userService', defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/chunjae/test05/config/ApplicationConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-11-02 09:13:53.639 INFO  [restartedMain] [com.chunjae.test05.Test05Application] - Starting Test05Application using Java 17.0.7 with PID 13140 (D:\kyo\spring_boot\test05\build\classes\java\main started by db400tea in D:\kyo\spring_boot\test05)
+2023-11-02 09:13:53.640 INFO  [restartedMain] [com.chunjae.test05.Test05Application] - No active profile set, falling back to 1 default profile: "default"
+2023-11-02 09:13:53.664 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-02 09:13:53.664 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-02 09:13:53.864 WARN  [restartedMain] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userService' defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class]] for bean 'userService' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=applicationConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/chunjae/test05/config/ApplicationConfig.class]] bound.
+2023-11-02 09:13:53.871 INFO  [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-02 09:13:53.882 ERROR [restartedMain] [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userService', defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/chunjae/test05/config/ApplicationConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-11-02 09:13:59.200 INFO  [restartedMain] [com.chunjae.test05.Test05Application] - Starting Test05Application using Java 17.0.7 with PID 3536 (D:\kyo\spring_boot\test05\build\classes\java\main started by db400tea in D:\kyo\spring_boot\test05)
+2023-11-02 09:13:59.201 INFO  [restartedMain] [com.chunjae.test05.Test05Application] - No active profile set, falling back to 1 default profile: "default"
+2023-11-02 09:13:59.225 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-02 09:13:59.225 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-02 09:13:59.421 WARN  [restartedMain] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userService' defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webSecurityConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class]] for bean 'userService' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=applicationConfig; factoryMethodName=userService; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/chunjae/test05/config/ApplicationConfig.class]] bound.
+2023-11-02 09:13:59.429 INFO  [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-02 09:13:59.439 ERROR [restartedMain] [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userService', defined in class path resource [com/chunjae/test05/config/WebSecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/chunjae/test05/config/ApplicationConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
