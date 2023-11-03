@@ -1,7 +1,6 @@
 package com.chunjae.test07.conf;
 
 import com.chunjae.test07.biz.UserService;
-import com.chunjae.test07.biz.UserServiceImpl;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,9 +20,6 @@ import java.util.Arrays;
 public class SecurityConfig {
 
     @Bean
-    public UserService userService() { return new UserServiceImpl();  }
-
-    @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
@@ -38,7 +34,7 @@ public class SecurityConfig {
                 .antMatchers("/").permitAll()
                 .antMatchers("/login", "/join", "/idCheck", "/emailCheck").permitAll()
                 .mvcMatchers("/","/resource/**","/css/**", "/js/**", "/images/**").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().authenticated();          //마지막에 나오는 것
 
         // login 설정
         http

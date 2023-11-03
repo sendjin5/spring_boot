@@ -1,24 +1,50 @@
 package com.chunjae.test07.biz;
 
+import com.chunjae.test07.entity.Role;
 import com.chunjae.test07.entity.User;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import com.chunjae.test07.entity.UserRole;
+import com.chunjae.test07.per.RoleMapper;
+import com.chunjae.test07.per.UserMapper;
+import com.chunjae.test07.per.UserRoleMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
+@Service
+public class UserService implements UserDetailsService {
 
-public interface UserService {
-    public List<User> getUserList();
-    public User getUser(String name);
-    public int getWithdraw(Integer id);
-    public int getActivate(String name);
-    public int getDormant(String name);
-    public User getByEmail(String email);
-    public User getByName(String name);
-    public User findById(String email, String tel);
-    public User findByPw(String email, String tel, String name);
-    public int userJoin(User user);
-    public int updateUser(User user);
-    public int updateLevel(String name, String lev);
-    public int removeUser(String name);
-    public PasswordEncoder passwordEncoder();
-    public User getUserById(Long id);
+    @Autowired
+    private RoleMapper roleMapper;
+
+    @Autowired
+    private UserRoleMapper userRoleMapper;
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public User findUserByLoginId(String loginId){
+        return userMapper.findUserByLoginId(loginId);
+    }
+
+    public void saveUser(User user){
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setActive(1);
+        userMapper.getUserInfo(user);
+        Role role = roleMapper.getRoleInfo("ADMIN");
+        UserRole userRole = new UserRole();
+        userRole.setUser_id(role.getId());
+        userRole.setRole_id(role.getId());
+        userRoleMapper.setUserRoleInfo(userRole);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
+    }
 }
