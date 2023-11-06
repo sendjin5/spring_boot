@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class UserRole {
-    private int user_id;
-    private int role_id;
+    private int userId;
+    private int roleId = 4;
 }

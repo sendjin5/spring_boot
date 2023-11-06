@@ -1,4 +1,4 @@
-package com.chunjae.test07.per;
+package com.chunjae.test07.persis;
 
 import com.chunjae.test07.entity.UserRole;
 import org.apache.ibatis.annotations.Mapper;

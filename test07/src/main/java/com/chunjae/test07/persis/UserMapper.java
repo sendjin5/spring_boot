@@ -1,6 +1,6 @@
-package com.chunjae.test07.per;
+package com.chunjae.test07.persis;
 
-import com.chunjae.test07.entity.Role;
+import com.chunjae.test07.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -8,5 +8,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Mapper
 public interface UserMapper {
-    Role getUserInfo(@Param("user") String user);
+    User findUserByLoginId(@Param("loginId") String loginId);
+    int setUserInfo(@Param("param") User param);
 }

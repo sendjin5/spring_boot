@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+    <script type="text/javascript" src="/static/cleditor/jquery.cleditor.js"></script>
+    <link rel="stylesheet" href="/static/cleditor/jquery.cleditor.css">
+</head>
+<body>
+    <div class="container">
+        <h2>보드 등록</h2>
+        <form th:action="@{/board/Add}" autocomplete="off" method="post">
+            <div>
+                <label th:for="title">제목</label>
+                <input type="text" name="title" placeholder="title" required>
+            </div>
+            <div>
+                <label th:for="content">내용</label>
+                <textarea name="content" id="content" class="textarea" rows="8" cols="100" maxlength="1400" required></textarea>
+                <script>
+                    $(document).ready(function() {
+                        $("#content").cleditor();
+                    });
+                </script>
+            </div>
+            <div>
+            <label th:for="author">저자</label>
+            <input type="text" name="author" placeholder="author" required>
+           </div>
+            <div>
+                <label th:for="file">파일 업로드(10MB 이하) </label>
+                <input type="file" name="file" id="file" multiple>
+            </div>
+            <div>
+                <button type="submit">보드 등록</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

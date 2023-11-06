@@ -1,20 +1,21 @@
 package com.chunjae.test07.domain;
 
+import com.chunjae.test07.entity.User;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.chunjae.test07.entity.User;
 
 import java.util.Arrays;
 import java.util.Collection;
-//스프링 시큐리티에서 기본적으로 제공하는 인터페이스(UserDetails)
-@Data
-public class UserPrinsipal implements UserDetails {
 
+//UserDetails(스프링시큐리티에서 기본적으로 제공하는 인터페이스)
+@Data
+public class UserPrincipal implements UserDetails {
 
     private User user;
 
-    public UserPrinsipal (User user) {
+    public UserPrincipal(User user){
         this.user = user;
     }
 
@@ -34,7 +35,7 @@ public class UserPrinsipal implements UserDetails {
     }
 
     @Override
-    public boolean isAccountNonExpired(){   //계정이 없냐고 물어봄
+    public boolean isAccountNonExpired() {
         return true;
     }
 
@@ -53,7 +54,7 @@ public class UserPrinsipal implements UserDetails {
         return user.getActive() == 1;
     }
 
-    public String getId(){
+    public String getId() {
         return user.getLoginId();
     }
 
